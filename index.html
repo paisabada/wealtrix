@@ -1,260 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Wealtrix Fintech Private Limited</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wealtrix Fintech Private Limited</title>
 
-<!-- SEO -->
-<meta name="description" content="Wealtrix Fintech Private Limited builds digital platforms focused on financial awareness, engagement, and responsible decision-making." />
-<meta name="keywords" content="Wealtrix Fintech, Paisabada, fintech India, financial awareness platform" />
-<meta name="author" content="Wealtrix Fintech Private Limited" />
-<meta name="robots" content="index, follow" />
+    <!-- SEO -->
+    <meta name="description"
+        content="Wealtrix Fintech Private Limited builds digital platforms focused on financial awareness, engagement, and responsible decision-making." />
+    <meta name="keywords" content="Wealtrix Fintech, Paisabada, fintech India, financial awareness platform" />
+    <meta name="author" content="Wealtrix Fintech Private Limited" />
+    <meta name="robots" content="index, follow" />
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-/* =========================
+    <style>
+        /* =========================
    WEALTRIX BRAND SYSTEM
    ========================= */
-:root{
-  --wx-blue:#0F2F4B;
-  --wx-green:#1FAF7A;
-  --wx-green-soft:#2ED39A;
-  --wx-bg-dark:#020617;
-  --wx-text-light:#E6EEF5;
+        :root {
+            --wx-blue: #0F2F4B;
+            --wx-green: #1FAF7A;
+            --wx-green-soft: #2ED39A;
+            --wx-bg-dark: #020617;
+            --wx-text-light: #E6EEF5;
 
-  --bg-main:radial-gradient(circle at top,#0F2F4B,#020617);
-  --text-main:var(--wx-text-light);
-  --nav-bg:rgba(15,47,75,.78);
-  --card-bg:rgba(255,255,255,.06);
-  --border-soft:rgba(31,175,122,.25);
-}
-body.light{
-  --bg-main:linear-gradient(to bottom,#f8fafc,#e2e8f0);
-  --text-main:#020617;
-  --nav-bg:rgba(255,255,255,.9);
-  --card-bg:rgba(0,0,0,.04);
-  --border-soft:rgba(31,175,122,.35);
-}
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{background:var(--bg-main);color:var(--text-main);line-height:1.6;transition:.3s}
+            --bg-main: radial-gradient(circle at top, #0F2F4B, #020617);
+            --text-main: var(--wx-text-light);
+            --nav-bg: rgba(15, 47, 75, .78);
+            --card-bg: rgba(255, 255, 255, .06);
+            --border-soft: rgba(31, 175, 122, .25);
+        }
 
-/* NAVBAR */
-.navbar{
-  position:sticky;top:0;z-index:100;
-  display:flex;justify-content:space-between;align-items:center;
-  padding:16px 24px;background:var(--nav-bg);backdrop-filter:blur(12px)
-}
-.logo{font-size:22px;font-weight:700}
-.logo span{color:var(--wx-green)}
-nav a{margin-left:20px;text-decoration:none;color:var(--text-main);font-size:15px;opacity:.85}
-nav a:hover{opacity:1}
-.menu-btn{display:none;font-size:22px;cursor:pointer}
+        body.light {
+            --bg-main: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+            --text-main: #020617;
+            --nav-bg: rgba(255, 255, 255, .9);
+            --card-bg: rgba(0, 0, 0, .04);
+            --border-soft: rgba(31, 175, 122, .35);
+        }
 
-/* THEME TOGGLE */
-.theme-toggle{
-  width:52px;height:26px;background:#0b2235;border-radius:20px;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:4px;cursor:pointer;margin-left:15px;position:relative
-}
-.theme-toggle::before{
-  content:"";position:absolute;width:20px;height:20px;background:#fff;
-  border-radius:50%;left:4px;transition:.35s
-}
-body.light .theme-toggle::before{transform:translateX(26px)}
-.icon{font-size:13px;z-index:1}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif
+        }
 
-/* HERO */
-.hero{
-  min-height:85vh;padding:80px 20px;text-align:center;
-  display:flex;flex-direction:column;justify-content:center
-}
-.hero h1{font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.2}
-.hero h1 span{
-  background:linear-gradient(90deg,var(--wx-green),var(--wx-green-soft));
-  -webkit-background-clip:text;color:transparent
-}
-.hero p{margin:22px auto;max-width:720px;font-size:16px;opacity:.9}
+        body {
+            background: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            transition: .3s
+        }
 
-/* BUTTONS */
-.hero-btns button{
-  margin:10px;padding:12px 26px;border-radius:8px;
-  border:none;cursor:pointer;font-size:15px;font-weight:600
-}
-.primary{
-  background:linear-gradient(90deg,var(--wx-green),var(--wx-green-soft));
-  color:#02120C
-}
-.secondary{
-  background:transparent;border:1px solid var(--wx-green);
-  color:var(--wx-green)
-}
+        /* NAVBAR */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            background: var(--nav-bg);
+            backdrop-filter: blur(12px)
+        }
 
-/* SECTIONS */
-.section{padding:70px 20px;text-align:center}
-.section h2{font-size:28px;margin-bottom:40px}
-.alt{background:rgba(255,255,255,.03)}
+        .logo {
+            font-size: 22px;
+            font-weight: 700
+        }
 
-/* CARDS */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px
-}
-.glass-card{
-  background:var(--card-bg);backdrop-filter:blur(14px);
-  padding:30px 22px;border-radius:14px;
-  border:1px solid var(--border-soft);
-  transition:.25s ease
-}
-.glass-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 40px rgba(0,0,0,.35)
-}
-.about-text{max-width:760px;margin:auto;opacity:.9}
+        .logo span {
+            color: var(--wx-green)
+        }
 
-/* FORM */
-form input,form textarea{
-  width:100%;padding:10px;margin:6px 0 15px;border-radius:6px;border:none
-}
+        /* nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 15px;
+            opacity: .85
+        }
 
-/* FOOTER */
-footer{
-  padding:30px 20px;text-align:center;font-size:14px;opacity:.8
-}
-footer a{color:inherit;text-decoration:none;margin:0 6px}
+        nav a:hover {
+            opacity: 1;
 
-/* MOBILE */
-@media(max-width:768px){
-  nav{display:none;position:absolute;top:65px;right:20px;
-  background:#020617;padding:15px;border-radius:10px;flex-direction:column}
-  nav.show{display:flex}
-  nav a{margin:10px 0}
-  .menu-btn{display:block}
-}
-</style>
+        } */
+
+        nav a {
+            position: relative;
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 15px;
+            opacity: .85;
+            padding-bottom: 4px;
+            transition: color 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* underline line */
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--wx-green), var(--wx-green-soft));
+            transition: width 0.35s ease;
+        }
+
+        /* hover animation */
+        nav a:hover {
+            opacity: 1;
+            color: var(--wx-green);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            background: var(--nav-bg);
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+        }
+
+        /* Scroll hone ke baad effect */
+        .navbar.scrolled {
+            padding: 12px 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 22px;
+            cursor: pointer
+        }
+
+        /* THEME TOGGLE */
+        .theme-toggle {
+            width: 52px;
+            height: 26px;
+            background: #0b2235;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px;
+            cursor: pointer;
+            margin-left: 15px;
+            position: relative
+        }
+
+        .theme-toggle::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            left: 4px;
+            transition: .35s
+        }
+
+        body.light .theme-toggle::before {
+            transform: translateX(26px)
+        }
+
+        .icon {
+            font-size: 13px;
+            z-index: 1
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 85vh;
+            padding: 80px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 6vw, 3.6rem);
+            line-height: 1.2
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, var(--wx-green), var(--wx-green-soft));
+            -webkit-background-clip: text;
+            color: transparent
+        }
+
+        .hero p {
+            margin: 22px auto;
+            max-width: 720px;
+            font-size: 16px;
+            opacity: .9;
+        }
+
+        /* BUTTONS */
+        .hero-btns button {
+            margin: 10px;
+            padding: 12px 26px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600
+        }
+
+        .primary {
+            background: linear-gradient(90deg, var(--wx-green), var(--wx-green-soft));
+            color: #02120C;
+        }
+
+        .hero-btns .primary:hover {
+            transform: scale(1.05);
+        }
+
+        .secondary {
+            background: transparent;
+            border: 1px solid var(--wx-green);
+            color: var(--wx-green)
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 70px 20px;
+            text-align: center
+        }
+
+        .section h2 {
+            font-size: 28px;
+            margin-bottom: 40px
+        }
+
+        .alt {
+            background: rgba(255, 255, 255, .03)
+        }
+
+        /* CARDS */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(14px);
+            padding: 30px 22px;
+            border-radius: 14px;
+            border: 1px solid var(--border-soft);
+            transition: .25s ease
+        }
+
+        .glass-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, .35)
+        }
+
+        .about-text {
+            max-width: 760px;
+            margin: auto;
+            opacity: .9;
+            padding: 25px;
+            font-size: 18px;
+        }
+
+        /* FORM */
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0 15px;
+            border-radius: 6px;
+            border: none;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 16px;
+            opacity: .8
+        }
+
+        footer a {
+            color: inherit;
+            text-decoration: none;
+            margin: 0 6px
+        }
+
+        /* MOBILE */
+        @media(max-width:768px) {
+            nav {
+                display: none;
+                position: absolute;
+                top: 65px;
+                right: 20px;
+                background: #020617;
+                padding: 15px;
+                border-radius: 10px;
+                flex-direction: column
+            }
+
+            nav.show {
+                display: flex
+            }
+
+            nav a {
+                margin: 10px 0
+            }
+
+            .menu-btn {
+                display: block
+            }
+        }
+
+        /* .logo img {
+            height: 72px;
+            width: auto;
+            display: block;
+        }
+
+        /* Dark / Light mode compatibility */
+        /* body.light .logo img {
+            filter: none;
+        } */
+
+        .logo img {
+            height: 82px;
+            width: auto;
+            display: block;
+            transition: filter 0.3s ease, transform 0.3s ease;
+
+        }
+
+        /* ✅ Dark mode – logo ko clear & bright banane ke liye */
+        body:not(.light) .logo img {
+            filter: brightness(1.3) contrast(1.2) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+        }
+
+        /* ✅ Light mode – original logo look */
+        body.light .logo img {
+            filter: none;
+        }
+
+        /* subtle hover animation */
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            .logo img {
+                height: 36px;
+            }
+
+            nav {
+                display: none;
+                /* later hamburger add kar sakte hain */
+            }
+        }
+
+        .enquiry {
+            display: inline-block;
+            /* background: linear-gradient(to right, #38bdf8, #6366f1); */
+            /* color: #020617; */
+            padding: 6px 16px;
+            font-size: 14px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, var(--wx-green), var(--wx-green-soft));
+            color: #02120C;
+        }
+
+        .enquiry:hover {
+            transform: scale(1.05);
+        }
+
+        /* DEFAULT = LIGHT MODE */
+        body:not(.dark) #about {
+            background: linear-gradient(135deg, #1e293b, #1FAF7A);
+            border-radius: 16px;
+            padding: 60px 30px;
+        }
+
+        body:not(.dark) #about h2 {
+            color: #1e293b;
+            /* premium dark heading */
+        }
+
+        body:not(.dark) #about .about-text {
+            color: #e2e8f0;
+            /* soft readable text */
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+    </style>
 </head>
 
 <body>
 
-<header class="navbar">
-  <div class="logo">Wealtrix<span>Fintech</span></div>
-  <nav id="navMenu">
-    <a href="#home">Home</a>
-    <a href="#platform">Platform</a>
-    <a href="#paisabada">Paisabada</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <div class="theme-toggle" onclick="toggleTheme()">
-    <span class="icon">☀️</span><span class="icon">🌙</span>
-  </div>
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
-</header>
+    <header class="navbar">
+        <!-- <div class="logo">Wealtrix<span>Fintech</span></div> -->
+        <div class="logo">
+            <img src="logo-removebg-preview.png" alt="Wealtrix Fintech Logo">
+        </div>
 
-<!-- Brand strip -->
-<div style="height:3px;background:linear-gradient(90deg,#0F2F4B,#1FAF7A,#2ED39A);"></div>
+        <nav id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#platform">Platform</a>
+            <a href="#paisabada">Paisabada</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <span class="icon">☀️</span><span class="icon">🌙</span>
+        </div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </header>
 
-<section class="hero" id="home">
-  <h1>Building Trusted<br><span>Financial Platforms</span></h1>
-  <p>
-    Wealtrix Fintech Private Limited is a technology-driven company focused on
-    building digital platforms that improve financial awareness, engagement,
-    and long-term decision-making.
-  </p>
-  <div class="hero-btns">
-    <button class="primary">Explore Our Platform</button>
-    <button class="secondary">Learn About Paisabada</button>
-  </div>
-</section>
+    <!-- Brand strip -->
+    <div style="height:3px;background:linear-gradient(90deg,#0F2F4B,#1FAF7A,#2ED39A);"></div>
 
-<section class="section" id="platform">
-  <h2>What We Build</h2>
-  <div class="grid">
-    <div class="glass-card">📊<h3>Financial Assessment Tools</h3>
-      <p>Simple tools to understand financial readiness.</p></div>
-    <div class="glass-card">🧠<h3>Behavioural Engagement</h3>
-      <p>Design focused on long-term habits.</p></div>
-    <div class="glass-card">🔐<h3>Vault-Based System</h3>
-      <p>Internal engagement and progress tracking.</p></div>
-    <div class="glass-card">🤝<h3>Guided Support</h3>
-      <p>Optional human-assisted understanding.</p></div>
-  </div>
-</section>
+    <section class="hero" id="home">
+        <h1>Building Trusted<br><span>Financial Platforms</span></h1>
+        <p>
+            Wealtrix Fintech Private Limited is a technology-driven company focused on
+            building digital platforms that improve financial awareness, engagement,
+            and long-term decision-making.
+        </p>
+        <div class="hero-btns">
+            <button class="primary">Explore Our Platform</button>
+            <button class="secondary">Learn About Paisabada</button>
+        </div>
+    </section>
 
-<section class="section alt" id="paisabada">
-  <h2>Paisabada Platform</h2>
-  <p class="about-text">
-    Paisabada is the consumer-facing financial engagement platform by
-    Wealtrix Fintech Private Limited, focused on clarity before commitment.
-  </p>
-  <div class="hero-btns">
-    <a href="https://paisabada.com" class="primary" style="text-decoration:none;padding:12px 26px;border-radius:8px">
-      Visit Paisabada
-    </a>
-  </div>
-</section>
+    <section class="section" id="platform">
+        <h2>What We <span>Build</span></h2>
+        <div class="grid">
+            <div class="glass-card">📊<h3>Financial Assessment Tools</h3>
+                <p>Simple tools to understand financial readiness.</p>
+            </div>
+            <div class="glass-card">🧠<h3>Behavioural Engagement</h3>
+                <p>Design focused on long-term habits.</p>
+            </div>
+            <div class="glass-card">🔐<h3>Vault-Based System</h3>
+                <p>Internal engagement and progress tracking.</p>
+            </div>
+            <div class="glass-card">🤝<h3>Guided Support</h3>
+                <p>Optional human-assisted understanding.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="section" id="about">
-  <h2>About Wealtrix</h2>
-  <p class="about-text">
-    Wealtrix Fintech Private Limited builds responsible, scalable platforms
-    with a strong focus on trust, transparency, and user-centric design.
-  </p>
-</section>
+    <section class="section alt" id="paisabada">
+        <h2>Paisabada Platform</h2>
+        <p class="about-text">
+            Paisabada is the consumer-facing financial engagement platform by
+            Wealtrix Fintech Private Limited, focused on clarity before commitment.
+        </p>
+        <div class="hero-btns">
+            <a href="https://paisabada.com" class="primary"
+                style="text-decoration:none;padding:12px 26px;border-radius:8px;margin: 20px;">
+                Visit Paisabada
+            </a>
+        </div>
+    </section>
 
-<section class="section alt" id="contact">
-  <h2>Contact Us</h2>
-  <form style="max-width:520px;margin:auto;text-align:left">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea rows="4" placeholder="Your Message" required></textarea>
-    <button class="primary" type="submit">Send Enquiry</button>
-  </form>
-  <p style="margin-top:15px;font-size:14px">
-    Email: info@wealtrix.com
-  </p>
-</section>
+    <section class="section" id="about">
+        <h2>About Wealtrix</h2>
+        <p class="about-text">
+            Wealtrix Fintech Private Limited builds responsible, scalable platforms
+            with a strong focus on trust, transparency, and user-centric design.
+        </p>
+    </section>
 
-<section class="section" id="privacy">
-  <h2>Privacy Policy</h2>
-  <p class="about-text">
-    We respect user privacy and do not access bank accounts or store sensitive
-    financial credentials. Data is used only to improve platform experience.
-  </p>
-</section>
+    <section class="section alt" id="contact">
+        <h2>Contact Us</h2>
+        <form style="max-width:520px;margin:auto;text-align:left">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button class="enquiry" type="submit">Send Enquiry</button>
+        </form>
+        <p style="margin-top:15px;font-size:14px;border-radius: 20px;">
+        <h3>Email: info@wealtrix.com</h3>
+        </p>
+    </section>
 
-<section class="section alt" id="terms">
-  <h2>Terms & Conditions</h2>
-  <p class="about-text">
-    This platform is designed for financial awareness and engagement only.
-    No investment advice or guaranteed returns are provided.
-  </p>
-</section>
+    <section class="section" id="privacy">
+        <h2>Privacy Policy</h2>
+        <p class="about-text">
+            We respect user privacy and do not access bank accounts or store sensitive
+            financial credentials. Data is used only to improve platform experience.
+        </p>
+    </section>
 
-<footer>
-  <p><strong>Wealtrix Fintech Private Limited</strong></p>
-  <p>
-    <a href="#privacy">Privacy</a> •
-    <a href="#terms">Terms</a> •
-    <a href="#contact">Contact</a>
-  </p>
-  <p style="max-width:720px;margin:10px auto;font-size:13px">
-    Regulated financial services, where applicable, are offered only through
-    authorised partners and approvals.
-  </p>
-  <p>© 2025 Wealtrix Fintech Pvt Ltd</p>
-</footer>
+    <section class="section alt" id="terms">
+        <h2>Terms & Conditions</h2>
+        <p class="about-text">
+            This platform is designed for financial awareness and engagement only.
+            No investment advice or guaranteed returns are provided.
+        </p>
+    </section>
 
-<script>
-function toggleMenu(){document.getElementById("navMenu").classList.toggle("show")}
-function toggleTheme(){
-  document.body.classList.toggle("light");
-  localStorage.setItem("theme",document.body.classList.contains("light")?"light":"dark");
-}
-window.onload=()=>{if(localStorage.getItem("theme")==="light")document.body.classList.add("light")}
-</script>
+    <footer>
+        <p><strong>Wealtrix Fintech Private Limited</strong></p>
+        <p>
+            <a href="#privacy">Privacy</a> •
+            <a href="#terms">Terms</a> •
+            <a href="#contact">Contact</a>
+        </p>
+        <p style="max-width:720px;margin:10px auto;font-size:16px">
+            Regulated financial services, where applicable, are offered only through
+            authorised partners and approvals.
+        </p>
+        <p>©️ 2025 Wealtrix Fintech Pvt Ltd</p>
+    </footer>
+
+    <!-- <script>
+        function toggleMenu() { document.getElementById("navMenu").classList.toggle("show") }
+        function toggleTheme() {
+            document.body.classList.toggle("light");
+            localStorage.setItem("theme", document.body.classList.contains("light") ? "light" : "dark");
+        }
+        window.onload = () => { if (localStorage.getItem("theme") === "light") document.body.classList.add("light") }
+    </script> -->
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("show");
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle("light");
+            localStorage.setItem(
+                "theme",
+                document.body.classList.contains("light") ? "light" : "dark"
+            );
+        }
+
+        window.onload = () => {
+            if (localStorage.getItem("theme") === "light") {
+                document.body.classList.add("light");
+            }
+        };
+
+        /* ✅ Sticky navbar scroll effect */
+        window.addEventListener("scroll", () => {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 20) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
 
 </body>
+
 </html>
