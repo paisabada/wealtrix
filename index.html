@@ -319,6 +319,11 @@
                 flex-direction: column
             }
 
+            /* ✅ Light mode only */
+            body.light nav {
+                background: #ffffff;
+            }
+
             nav.show {
                 display: flex
             }
@@ -395,25 +400,6 @@
 
         .enquiry:hover {
             transform: scale(1.05);
-        }
-
-        /* DEFAULT = LIGHT MODE */
-        body:not(.dark) #about {
-            background: linear-gradient(135deg, #1e293b, #1FAF7A);
-            border-radius: 16px;
-            padding: 60px 30px;
-        }
-
-        body:not(.dark) #about h2 {
-            color: #1e293b;
-            /* premium dark heading */
-        }
-
-        body:not(.dark) #about .about-text {
-            color: #e2e8f0;
-            /* soft readable text */
-            font-size: 1.05rem;
-            line-height: 1.7;
         }
     </style>
 </head>
